@@ -2,5 +2,12 @@ package org.example;
 
 public class Estagiario implements Cargo{
 
-    public int aumentoSalarial(){return 0;}
+    private static Estagiario instance = new Estagiario();
+    private Estagiario() {}
+    public static Estagiario getInstance() {
+        return instance;
+    }
+    public int aumentoSalarial() {
+        return 0;
+    }
 }
